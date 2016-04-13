@@ -11,11 +11,8 @@ import React, { Component, PropTypes } from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
 import s from './App.scss';
 import Header from '../Header';
-import Feedback from '../Feedback';
-import Footer from '../Footer';
 
 class App extends Component {
-
   static propTypes = {
     context: PropTypes.shape({
       insertCss: PropTypes.func,
@@ -55,8 +52,6 @@ class App extends Component {
       <div>
         <Header />
         {this.props.children}
-        <Feedback />
-        <Footer />
       </div>
     ) : this.props.children;
   }

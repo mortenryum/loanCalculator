@@ -8,14 +8,16 @@
  */
 
 import React from 'react';
-import Home from './Home';
-import fetch from '../../core/fetch';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './MonthlyPaymentBox.scss';
 
-export default {
+function MonthlyPaymentBox() {
+  return (
+    <div>
+      <h2>Monthly payment</h2>
+      <p>16 311 kr</p>
+    </div>
+  );
+}
 
-  path: '/',
-
-  action() {
-    return <Home />;
-  }
-};
+export default withStyles(MonthlyPaymentBox, s);

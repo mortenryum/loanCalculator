@@ -1,0 +1,6 @@
+{
+  "name": "MonthlyPaymentBox",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MonthlyPaymentBox.js"
+}
