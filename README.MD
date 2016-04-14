@@ -14,7 +14,7 @@ Jeg håper dere kan se denne koden i lys av at jeg ikke kunne noe om dette fra f
 En nettleser vil poppe opp på `http://localhost:3001` med appen.
 
 ## Design & Valg jeg har gjort
- Jeg har basert denne appen på [React Starter Kit](https://github.com/kriasoft/react-starter-kit), som er en boilerplate for React-apper av høy kvalitet som skal følge "best practices". Ergo har jeg latt ekspertene ta valgene for meg. 
+ Jeg har basert denne appen på [React Starter Kit](https://github.com/kriasoft/react-starter-kit), som er en boilerplate for React-apper av høy kvalitet som skal følge "best practices". Altså har jeg latt ekspertene ta de fleste av valgene for meg. 
  
  I react har jeg valgt å dele de tre feltene inn i egne komponenter, som kommuniserer med en hovedkomponent. Jeg ønsket også å dele selve "resultatet" opp i en komponent, men det ser det ikke ut som jeg rekker.
  
@@ -43,7 +43,10 @@ Jeg er også ny innen SCSS og her er det nok en haug med funksjoner jeg kunne br
 ### Fjernet overflødige verktøy og moduler
 Det følger med en del jeg ikke trenger i React Starter Kit og mye har jeg fjernet, men noe gjenstår, bl.a. en database-løsning.
 ### Bedre (og responsivt!) design
-Designet ser jo helt greit ut, men jeg ville laget noe litt mindre trist med mer tid. Dessuten er det ikke responsivt. Er snakk om en media query og noen få selectorer, ikke store greiene. 
+Designet ser jo helt greit ut, men jeg ville laget noe litt mindre trist med mer tid. Dessuten er det ikke responsivt. Er snakk om en media query og noen få selectorer, ikke store greiene.
+### "Lasteindikator"
+Jeg skulle ha hatt noe som indikerte at appen enten venter på debounce-delay eller snakker med APIet. 
+
 ## Noen ord til slutt
 Vil bare si at dette var en utrolig morsom oppgave som det frister å jobbe videre med (no ass-kissing, jeg lover!). ReactJS var en fryd å jobbe med, og skulle jeg på tross av denne leveransen få jobben kan du banne på at jeg skal lese meg opp på det i månedene før jeg inntrer. 
 
