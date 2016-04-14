@@ -18,13 +18,9 @@ export default (req, res, next) => {
   const years = req.query.years;
   const interestRate = req.query.interestRate;
 
-  try {
-    if (amount && years && interestRate) {
-      cfsProxy.execute(amount, interestRate, years, res);
-    } else{
-      res.status(400).send('Could not process API request because you did not provide the necessary parameters. Required parameters are amount, years and interestRate');
-    }
-  } catch (e) {
-    res.status(500).send(e);
+  if (amount && years && interestRate) {
+    cfsProxy.execute(amount, interestRate, years, res);
+  } else {
+    res.status(400).send('Could not process API request because you did not provide the necessary parameters. Required parameters are amount, years and interestRate');
   }
 };

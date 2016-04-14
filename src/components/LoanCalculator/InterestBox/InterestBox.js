@@ -7,23 +7,38 @@ class InterestBox extends React.Component {
     super(props);
     this.state = {
       value: props.value,
+      validClass: '',
     };
   }
 
-  handleChange = (e) => {
-    this.setState({ value: e.target.value });
-    this.props.onUpdate(e.target.value);
+  componentDidMount = () => {
+    this.setState({ value: this.props.value });
+    this.validate(this.props.value, this.props.onUpdate);
   };
 
-  componentWillMount = () => {
-    this.props.onUpdate(this.state.value);
+  validate = (val, callback) => {
+    if (!val) {
+      this.state.validClass = s.invalid;
+    }
+    if (val > 0 && val < 99) {
+      this.state.validClass = '';
+      this.setState({ value: val });
+      callback(val);
+    } else{
+      this.state.validClass = s.invalid;
+    }
+  };
+
+  handleChange = (e) => {
+    this.setState({ value: e.target.value });
+    this.validate(e.target.value, this.props.onUpdate);
   };
 
   render() {
     return (
       <div>
         <label htmlFor="interest">Interest</label>
-        <input type="number" name="interest" id="interest" value={this.state.value} onChange={this.handleChange} />
+        <input type="number" name="interest" id="interest" className={this.state.validClass} value={this.state.value} onChange={this.handleChange} />
       </div>
     );
   }

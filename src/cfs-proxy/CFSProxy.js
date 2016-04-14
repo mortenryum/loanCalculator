@@ -26,7 +26,7 @@ class CFSProxy {
         const monthlyPayment = responseBody.amortizationSchedule[0].payment.toFixed(2);
         res.send({ monthlyPayment });
       } else {
-        throw new Error(`Failed CFS request: ${error}`);
+        res.status(400).send(body);
       }
     });
   }
