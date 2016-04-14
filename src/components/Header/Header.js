@@ -15,15 +15,7 @@ import Link from '../Link';
 function Header() {
   return (
     <div className={s.root}>
-      <div className={s.container}>
-        <Link className={s.brand} to="/">
-          <img src={require('./logo-small.png')} width="38" height="38" alt="React" />
-          <span className={s.brandTxt}>BankRyum</span>
-        </Link>
-        <div className={s.banner}>
-          <h1 className={s.bannerTitle}>Calculate your loan</h1>
-        </div>
-      </div>
+        <h1 className={s.bannerTitle}>Calculate your loan</h1>
     </div>
   );
 }

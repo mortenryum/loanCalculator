@@ -8,8 +8,6 @@
  */
 
 import React, { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Home.scss';
 import LoanCalculator from '../../components/LoanCalculator';
 
 const title = 'BankRyum | Lånekalkulator';
@@ -23,4 +21,4 @@ function Home(props, context) {
 
 Home.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default withStyles(Home, s);
+export default Home;

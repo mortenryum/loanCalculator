@@ -1,0 +1,6 @@
+{
+  "name": "InterestBox",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./InterestBox.js"
+}

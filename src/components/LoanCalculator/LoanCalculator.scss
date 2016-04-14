@@ -1,3 +1,55 @@
-.derp{
-  width: 200px;
+@import "../variables.scss";
+
+.loanCalculator{
+  width: 50%;
+  text-align: left;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  min-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.loanCalculator > div{
+  text-align: right;
+  padding: 3% 4% 0 4%;
+}
+
+.loanCalculator > div label{
+  font-weight: bold;
+}
+
+.loanCalculator > div label:after{
+  content: ':';
+  margin-right: 10px;
+}
+
+.loanCalculator > div:last-child{
+  border-top: 1px dashed #EFEFEF;
+  margin-top: 3%;
+  padding: 3% 4%;
+}
+
+.loanCalculator input[type=number]{
+  border: none;
+  border-bottom: 1px solid #a7a7a7;
+}
+
+.loanCalculator input[type=number]:focus{
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+
+.loanCalculator > div:last-child input[type=number]{
+  border: none;
+  color: #000;
+}
+
+.loanCalculator input[type=number]::-webkit-inner-spin-button,
+.loanCalculator input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
