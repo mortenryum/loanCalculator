@@ -2,6 +2,9 @@ import React from 'react';
 import withStyles from '../../../../node_modules/isomorphic-style-loader/lib/withStyles';
 import s from './YearsBox.scss';
 
+const MIN_YEARS = 1;
+const MAX_YEARS = 40;
+
 class YearsBox extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +23,7 @@ class YearsBox extends React.Component {
     if (!val) {
       this.state.validClass = s.invalid;
     }
-    if (val > 0 && val < 99) {
+    if (val >= MIN_YEARS && val <= MAX_YEARS) {
       this.state.validClass = '';
       callback(val);
     } else{

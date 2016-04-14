@@ -39,6 +39,7 @@ class LoanCalculator extends React.Component {
   };
 
   calculateDownPayment = () => {
+    console.log("calcdownpayment");
     const request = new XMLHttpRequest();
     request.open('GET', `/api/getMonthlyPayment/?amount=${this.state.amount}&years=${this.state.years}&interestRate=${this.state.interest}`, true);
 
@@ -63,7 +64,7 @@ class LoanCalculator extends React.Component {
         <AmountBox onUpdate={this.onAmountUpdate} value={DEFAULT_AMOUNT} />
         <YearsBox onUpdate={this.onYearsUpdate} value={DEFAULT_YEARS} />
         <InterestBox onUpdate={this.onInterestUpdate} value={DEFAULT_INTEREST_RATE} />
-        <div><label htmlFor="downPayment">Monthly down payment</label><input type="number" id="downPayment" name="downPayment" value={this.state.downPayment} disabled/></div>
+        <div><label htmlFor="downPayment">Monthly payment</label><input type="number" id="downPayment" name="downPayment" value={this.state.downPayment} disabled/></div>
       </div>
     );
   }

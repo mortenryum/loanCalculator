@@ -2,6 +2,9 @@ import React from 'react';
 import withStyles from '../../../../node_modules/isomorphic-style-loader/lib/withStyles';
 import s from './AmountBox.scss';
 
+const MIN_AMOUNT = 10000;
+const MAX_AMOUNT = 100000000;
+
 class AmountBox extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +23,7 @@ class AmountBox extends React.Component {
     if (!val) {
       this.state.validClass = s.invalid;
     }
-    if (val > 1000 && val < 100000000) {
+    if (val >= MIN_AMOUNT && val <= MAX_AMOUNT) {
       this.state.validClass = '';
       callback(val);
     } else {

@@ -2,6 +2,9 @@ import React from 'react';
 import withStyles from '../../../../node_modules/isomorphic-style-loader/lib/withStyles';
 import s from './InterestBox.scss';
 
+const MIN_INTEREST = 0;
+const MAX_INTEREST = 20;
+
 class InterestBox extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +23,7 @@ class InterestBox extends React.Component {
     if (!val) {
       this.state.validClass = s.invalid;
     }
-    if (val > 0 && val < 99) {
+    if (val >= MIN_INTEREST && val <= MAX_INTEREST) {
       this.state.validClass = '';
       this.setState({ value: val });
       callback(val);
