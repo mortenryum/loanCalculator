@@ -25,6 +25,7 @@ En nettleser vil poppe opp på `http://localhost:3001` med appen.
  * Gjenbruksmulighet
  * Kan implementere mekanismer for å hindre overbelastning av APIet
  * Kan enkelt mocke API-responser
+ * Ingen cross-origin policy brudd
 
 ## Hadde jeg bare hatt mer tid...
 Hadde jeg hatt mer tid, ville jeg fikset følgende:
